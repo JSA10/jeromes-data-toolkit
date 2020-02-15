@@ -29,10 +29,14 @@ matplot(data, type = "l")
 # analyse -----------------------------------------------------------------
 
 # PROCESS
+# 0) Select response and predictor variables (be wary around assumption predictors unaffected by intervention)
 # 1) specify period used for training model (pre-intervention) and period for
 #   computing the 'counterfactual' prediction (post-intervention)
 # 2) Run inference using CausalImpact function, with your data and periods as inputs
 # 3) Visualise and analyse the CausalImpact object (using plot and summary)
+# 4) Communicate average impact and credible interval - if 0 not covered then likely to
+# be real effect
+
 
 
 pre.period <- c(1, 70)
